@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+    def index
+        @articles = Article.all
+    end
+
     def new
         @article = Article.new
     end
@@ -7,12 +11,16 @@ class ArticlesController < ApplicationController
     def create
         #render plain: params[:article].inspect
         @article = Article.new(article_params)
-        if @aticle.save
+        if @article.save
             flash[:notice] = "Article was successfully created."
-            redirect_to articles_show(@article)
+            redirect_to articles_path(@article)
         else
             render 'new'
         end
+    end
+    
+    def show
+        @article = Article.find(params[:id])
     end
 
     private
@@ -20,9 +28,5 @@ class ArticlesController < ApplicationController
 
         params.require(:article).permit(:title, :description)
         end
-
-    def show
-        @article = Article.find(params[:id])
-    end
     
 end
