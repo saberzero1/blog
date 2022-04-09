@@ -21,4 +21,8 @@ class ArticlesController < ApplicationController
         params.require(:article).permit(:title, :description)
         end
 
+    def show
+        @article = Article.find(params[:id])
+    end
+    
 end
