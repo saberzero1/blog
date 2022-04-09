@@ -3,15 +3,6 @@ name: CI
 on: [push]
 
 jobs:
-  ssh:
-    if: github.ref == 'refs/heads/main'
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
   deploy:
     if: github.ref == 'refs/heads/main'
     runs-on: [ubuntu-latest]
@@ -23,4 +14,5 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: cd ${{ secrets.PROJECT_PATH }} && git pull
