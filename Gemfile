@@ -76,5 +76,6 @@ end
 group :production do
   # Use MySQL as the deployment database
   # sudo apt-get install default-libmysqlclient-dev
+  # Uncomment below line when deploying to Plesk
   # gem "mysql2"
 end
