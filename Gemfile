@@ -75,6 +75,6 @@ end
 
 group :production do
   # Use MsSQL as the deployment database
-  gem "libmariadb-dev"
+  gem "db-mariadb"
   gem "mysql2"
 end
