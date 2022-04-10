@@ -13,7 +13,8 @@ gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
 
 # Use MsSQL as the deployment database
-gem "mysql2"
+# gem "libmariadb-dev"
+# gem "mysql2"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
