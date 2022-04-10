@@ -21,7 +21,6 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   database: production
   username: ENV["DB_USERNAME"]
   password: ENV["DB_PASSWORD"]
