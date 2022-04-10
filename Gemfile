@@ -74,7 +74,7 @@ group :test do
 end
 
 group :production do
-  # Use MsSQL as the deployment database
-  gem "db-mariadb"
+  # Use MySQL as the deployment database
+  # sudo apt-get install default-libmysqlclient-dev
   gem "mysql2"
 end
