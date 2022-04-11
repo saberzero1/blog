@@ -15,8 +15,12 @@
 
   <body>
     <%= render 'layouts/navigation' %>
+    <% unless current_page?('/') %>
     <div class="body-container">
       <%= yield %>
     </div>
+    <% else %>
+      <%= yield %>
+    <% end %> 
   </body>
 </html>
