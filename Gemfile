@@ -47,6 +47,10 @@ gem "sassc-rails"
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 
+# Pagination
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 # Encryption
 gem "figaro"
 
