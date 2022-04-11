@@ -79,9 +79,7 @@ content:"\f0e0"
 50% { opacity: 0; }
 }
 
-.typewriter {
---caret: currentcolor;
-}
+$caret: currentcolor;
 
 .typewriter::before {
 content: "";
@@ -90,12 +88,12 @@ animation: typing 13.5s infinite;
 
 .typewriter::after {
 content: "";
-border-right: 1px solid var(--caret);
+border-right: 1px solid $caret;
 animation: blink 0.5s linear infinite;
 }
 
 .typewriter.thick::after {
-border-right: 1ch solid var(--caret);
+border-right: 1ch solid $caret;
 }
 
 .typewriter.nocaret::after {

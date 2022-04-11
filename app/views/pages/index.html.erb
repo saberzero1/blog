@@ -13,7 +13,7 @@
                     <div id="banner-left"></div>
                     <div id="banner-right"></div>
                 </div>
-                <a href="emile.webp" target="_blank"><%= image_tag("emile-small.webp", id: "profile-picture", alt: "Profile picture") %></a>
+                <%= image_tag("emile-small.webp", id: "profile-picture", alt: "Profile picture") %>
                 <h1 id="name">Emile Bangma</h1>
                 <div id="typewriter-container">
                     <p class="css-replace-text" aria-label="Hi! I'm a developer">Hi! I'm a&nbsp;<span class="hidden">developer</span><span class="typewriter"></span></p>
@@ -24,7 +24,7 @@
                     <div><a class="link" href="mailto:contact@emilebangma.com" name="Mail Address">CONTACT ME<span class="space"></span><i class="fa fa-envelope"></i></a></div>
                 </div>
             </div>
-            <div class="col-sm-6" id="container">
+            <div id="container">
                 <div class="content">
                     <h2 class="content-title">About Me</h2>
                 </div>
@@ -38,7 +38,7 @@
                         </div>
                         <hr class="clear-content">
                         <div>
-                            <span class="text-box">Age</span><p class="right-text inline" id="ageNumber">24</p>
+                            <span class="text-box">Age</span><p class="right-text inline" id="ageNumber"><%= (Time.now.to_fs(:number).to_i - Date.parse("1998-01-20").to_time.to_fs(:number).to_i)/10e9.to_i %></p>
                             <hr class="clear">
                             <span class="text-box">Residence</span><p class="right-text inline">Netherlands</p>
                             <hr class="clear">
@@ -46,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-                <script type="text/javascript">document.getElementById("ageNumber").innerHTML = (new Date(Date.now() - new Date(1998, 0, 20)).getFullYear() - 1970)</script>
                 <hr>
                 <div class="content">
                     <h2 class="content-title">Education</h2>

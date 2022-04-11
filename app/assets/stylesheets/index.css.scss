@@ -459,14 +459,14 @@ position: fixed;
 z-index: 3;
 width: 100vw;
 height: 100vh;
-background-color: var(--background-color);
+background-color: $background-color;
 opacity: 1;
-background-image: linear-gradient(30deg, var(--background-color-light) 12%, transparent 12.5%, transparent 87%, var(--background-color-light) 87.5%, var(--background-color-light)),
-linear-gradient(150deg, var(--background-color-light) 12%, transparent 12.5%, transparent 87%, var(--background-color-light) 87.5%, var(--background-color-light)),
-linear-gradient(30deg, var(--background-color-light) 12%, transparent 12.5%, transparent 87%, var(--background-color-light) 87.5%, var(--background-color-light)),
-linear-gradient(150deg, var(--background-color-light) 12%, transparent 12.5%, transparent 87%, var(--background-color-light) 87.5%, var(--background-color-light)),
-linear-gradient(60deg, var(--background-color-light-transparent) 25%, transparent 25.5%, transparent 75%, var(--background-color-light-transparent) 75%, var(--background-color-light-transparent)),
-linear-gradient(60deg, var(--background-color-light-transparent) 25%, transparent 25.5%, transparent 75%, var(--background-color-light-transparent) 75%, var(--background-color-light-transparent));
+background-image: linear-gradient(30deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(150deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(30deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(150deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5%, transparent 75%, $background-color-light-transparent 75%, $background-color-light-transparent),
+linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5%, transparent 75%, $background-color-light-transparent 75%, $background-color-light-transparent);
 background-size: 80px 140px;
 background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 filter: brightness(0.4);
@@ -478,7 +478,7 @@ justify-items: center;
 }
 @media screen and (min-width: 1221px) and (min-height: 769px) {
 .wrapper {
-background: var(--background-color, 0.15);
+background: ($background-color, 0.15);
 position: absolute;
 left: 0;
 width: 100%;
@@ -499,17 +499,17 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-z-index: 3;
+z-index: 5;
 opacity: 0.5;
 }
 .bg-bubbles li {
-z-index: 4;
+z-index: 5;
 position: absolute;
 list-style: none;
 display: block;
 width: 40px;
 height: 40px;
-background-color: var(--background-color-boxes, 0.15);
+background-color: $background-color-boxes;
 bottom: -160px;
 -webkit-animation: square 25s infinite;
 animation: square 25s infinite;
@@ -535,7 +535,7 @@ left: 40%;
 width: 60px;
 height: 60px;
 animation-duration: 22s;
-background-color: var(--background-color-boxes, 0.15);
+background-color: $background-color-boxes;
 }
 .bg-bubbles li:nth-child(5) {
 left: 70%;
@@ -545,7 +545,7 @@ left: 80%;
 width: 120px;
 height: 120px;
 animation-delay: 3s;
-background-color: var(--background-color-boxes, 0.15);
+background-color: $background-color-boxes;
 }
 .bg-bubbles li:nth-child(7) {
 left: 32%;
@@ -566,7 +566,7 @@ width: 10px;
 height: 10px;
 animation-delay: 2s;
 animation-duration: 40s;
-background-color: var(--background-color-boxes, 0.15);
+background-color: $background-color-boxes;
 }
 .bg-bubbles li:nth-child(10) {
 left: 90%;
