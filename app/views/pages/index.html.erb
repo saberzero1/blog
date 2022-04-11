@@ -1,2 +1,132 @@
-<h1>Welcome to my Blog</h1>
-<%= link_to 'About', about_path %>
+<% content_for :head do %>
+    <%= stylesheet_link_tag "index.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "fa.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "after.css", "data-turbo-track": "reload" %>
+<% end %>
+<div id="background-boxes"></div>
+<div class="wrapper">
+    <div class="grid-center">
+        <div class="center">
+            <div id="card">
+                <div id="banner-top"></div>
+                <div id="banner">
+                    <div id="banner-left"></div>
+                    <div id="banner-right"></div>
+                </div>
+                <a href="emile.webp" target="_blank"><%= image_tag("emile-small.webp", id: "profile-picture", alt: "Profile picture") %></a>
+                <h1 id="name">Emile Bangma</h1>
+                <div id="typewriter-container">
+                    <p class="css-replace-text" aria-label="Hi! I'm a developer">Hi! I'm a&nbsp;<span class="hidden">developer</span><span class="typewriter"></span></p>
+                </div>
+                <p id="icons"><a href="https://github.com/saberzero1" name="GitHub profile page" target="_blank" rel="noreferrer"><i class="fa fa-2x fa-github" title="GitHub Profile Page" name="GitHub Profile Page"></i></a><span class="space"></span><a href="https://www.linkedin.com/in/emilebangma/" title="LinkedIn profile page" name="LinkedIn profile page" target="_blank" rel="noreferrer"><i class="fa fa-2x fa-linkedin" name="LinkedIn Profile Page"></i></a><span class="space"></span><a href="https://www.instagram.com/ewjbangma/" title="Instagram profile page" name="Instagram profile page" target="_blank" rel="noreferrer"><i class="fa fa-2x fa-instagram" name="Instagram Profile Page"></i></a></p>
+                <div class="fifty">
+                    <div class="right-border"><a class="link" href="#" name="CV">DOWNLOAD CV<span class="space"></span><i class="fa fa-download"></i></a></div>
+                    <div><a class="link" href="mailto:contact@emilebangma.com" name="Mail Address">CONTACT ME<span class="space"></span><i class="fa fa-envelope"></i></a></div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="container">
+                <div class="content">
+                    <h2 class="content-title">About Me</h2>
+                </div>
+                <hr>
+                <div class="content">
+                    <div class="content-fifty">
+                        <div class="right-border-content">
+                            <p class="left-text">Hello! I'm Emile Bangma.</p>
+                            <p class="left-text">I'm a Computer Science student at Utrecht University.</p>
+                            <p class="left-text">This site is work in progress.</p>
+                        </div>
+                        <hr class="clear-content">
+                        <div>
+                            <span class="text-box">Age</span><p class="right-text inline" id="ageNumber">24</p>
+                            <hr class="clear">
+                            <span class="text-box">Residence</span><p class="right-text inline">Netherlands</p>
+                            <hr class="clear">
+                            <span class="text-box">Address</span><p class="right-text inline">Utrecht</p>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">document.getElementById("ageNumber").innerHTML = (new Date(Date.now() - new Date(1998, 0, 20)).getFullYear() - 1970)</script>
+                <hr>
+                <div class="content">
+                    <h2 class="content-title">Education</h2>
+                    <hr>
+                    <div class="timeline">
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3>2022 - </h3>
+                            <p>MSc Computing Science</p>
+                            <p>Utrecht University</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3>2018 - 2022</h3>
+                            <p>BSc Computer Science</p>
+                            <p>Utrecht University</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <hr>
+                <div class="content">
+                    <h2 class="content-title">Work Experience</h2>
+                    <hr>
+                    <div class="timeline">
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3>2017</h3>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3>2016</h3>
+                            <p>Lorem ipsum..</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <hr>
+                <div class="content">
+                    <h2 class="content-title">Projects</h2>
+                    <hr>
+                    <div class="timeline">
+                        <div class="timeline-container timeline-right">
+                            <div class="timeline-content">
+                                <a href="https://github.com/UU-tracktech/tracktech" target="_blank" rel="noreferrer"><img align="center" class="svg" src="https://github-readme-stats.vercel.app/api/pin/?username=UU-tracktech&repo=tracktech&bg_color=31313A&hide_border=true&icon_color=f99502&text_color=9c9ca1&title_color=f99502" alt="Real-time tracking of objects on multiple cameras"/></a>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <hr>
+                <div class="content">
+                    <a href="https://github.com/saberzero1" target="_blank" rel="noreferrer"><img class="svg" src="https://github-readme-stats.vercel.app/api?username=saberzero1&show_icons=true&count_private=true&include_all_commits=true&bg_color=31313A&hide_border=true&icon_color=f99502&text_color=9c9ca1&title_color=f99502&" alt="GitHub Stats"></a>
+                </div>
+                <hr>
+                <div class="content">
+                    <a href="https://github.com/saberzero1" target="_blank" rel="noreferrer"><img class="svg" src="https://github-readme-streak-stats.herokuapp.com/?user=saberzero1&background=31313A&stroke=31313A&hide_border=true&icon_color=f99502&currStreakNum=9c9ca1&title_color=f99502&sideNums=9C9CA1&sideLabels=f99502&dates=9c9ca1" alt="GitHub Streak"></a>
+                </div>
+                <hr>
+                <div class="content">
+                    <a href="https://github.com/saberzero1" target="_blank" rel="noreferrer"><img class="svg" src="https://github-readme-stats.vercel.app/api/top-langs/?username=saberzero1&theme=gruvbox&langs_count=10&layout=compact&bg_color=31313A&hide_border=true&icon_color=f99502&text_color=9c9ca1&title_color=f99502&hide=jupyter%20notebook" alt="GitHub Language Stats"></a>
+                </div>
+                <p class="copy">
+                    &copy; 2022 Emile Bangma
+                </p>
+            </div>
+        </div>
+    </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
