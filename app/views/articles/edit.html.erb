@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h1>Edit Article</h1>
 
 <%= render 'form' %>
@@ -5,3 +6,6 @@
 <%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"} %>
 
 <%= link_to 'Back', articles_path %>
+<% else %>
+<% controller.redirect_to root_path %>
+<% end %>

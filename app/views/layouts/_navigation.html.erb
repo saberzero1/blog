@@ -15,7 +15,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><%= link_to "Articles", articles_path %></li>
+                <% if logged_in? %>
                 <li><%= link_to "Create Article", new_article_path %></li>
+                <% else %>
+                <% end %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <% if logged_in? %>
