@@ -1,5 +1,9 @@
+<% if logged_in? %>
 <h1>Create an Article</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', articles_path %>
+<% else %>
+<% controller.redirect_to root_path %>
+<% end %>
