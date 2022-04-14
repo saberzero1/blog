@@ -30,6 +30,19 @@ linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5
 background-size: 80px 140px;
 background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
+a,h2, h4 {
+color: $text-color-minor;
+}
+p {
+color: $text-color-main;
+}
+hr {
+height: 0;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
+}
 .body-container {
 background-color: rgba(0,0,0,0.6);
 width: 100%;
@@ -53,7 +66,13 @@ background: $background-color-light;
 .body-container::-webkit-scrollbar-thumb {
 background-color: $accent-color;
 border-radius: 4px;
-border: 3px solid $lining-color-light;
+border-width: 3px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
+}
+.well {
+background-color: $background-color-light;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 }
 #logo {
 float: left;
@@ -67,20 +86,31 @@ font-weight: bold;
 text-decoration: none;
 }
 .article-actions {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 padding-top: 5px;
 }
 .article-title {
+color: $text-color-header;
 font-weight: bold;
 font-size: 1.5em;
 }
 .article-body {
-border-top: 1px solid #eaeaea;
+color: $text-color-main;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);;
 padding-top: 15px;
 padding-bottom: 15px;
 }
 .article-meta-details {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 margin-top: 15px;
 }
 .description {
@@ -91,7 +121,10 @@ list-style: none;
 padding-left: 0;
 }
 .article-body {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 padding-top: 15px;
 padding-bottom: 15px;
 }
@@ -100,7 +133,10 @@ font-weight: bold;
 font-size: 1.5em;
 }
 .article-meta-details {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 margin-top: 15px;
 }
 .listing {
