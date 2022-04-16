@@ -30,7 +30,7 @@ linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5
 background-size: 80px 140px;
 background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
-a:not(.nav-link):not(.index-link),h2, h4 {
+a:not(.nav-link):not(.index-link):not(.btn):not(.active > a), h1, h2, h4, .control-label {
 color: $text-color-minor;
 }
 p {
@@ -195,3 +195,21 @@ background-color: $background-color;
 color: $text-color-minor;
 }
 
+.pagination > li > a, .pagination > .disabled > a {
+background-color: $background-color-light;
+border-color: $background-color;
+}
+
+.pagination > li > a:hover, .pagination > .disabled > a:hover {
+color: $background-color-light;
+background-color: $background-color;
+border-color: $background-color;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover {
+color: $background-color-light;
+background-color: $accent-color;
+border-color: $background-color;
+}
+
+    
