@@ -48,7 +48,7 @@
                         <div class="right-border-content">
                             <p class="left-text">Hello! I'm Emile Bangma.</p>
                             <p class="left-text">I'm a Computer Science student at Utrecht University.</p>
-                            <p class="left-text">This site is work in progress.</p>
+                            <p class="left-text">I have a <%= link_to 'blog', articles_url, class: "orange-link" %>.</p>
                         </div>
                         <hr class="clear-content">
                         <div>
@@ -125,7 +125,7 @@
                     <a href="https://github.com/saberzero1" target="_blank" rel="noreferrer"><img class="svg" src="https://github-readme-stats.vercel.app/api/top-langs/?username=saberzero1&theme=gruvbox&langs_count=10&layout=compact&bg_color=31313A&hide_border=true&icon_color=f99502&text_color=9c9ca1&title_color=f99502&hide=jupyter%20notebook" alt="GitHub Language Stats"></a>
                 </div>
                 <p class="copy">
-                    &copy; 2022 Emile Bangma
+                    &copy; <%= DateTime.now.year %> Emile Bangma
                 </p>
             </div>
         </div>
