@@ -30,7 +30,7 @@ linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5
 background-size: 80px 140px;
 background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
-a,h2, h4 {
+a:not(.nav-link):not(.index-link),h2, h4 {
 color: $text-color-minor;
 }
 p {
@@ -152,11 +152,13 @@ background-color: $text-color-minor;
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
 color: $background-color;
+font-weight: 700;
 }
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
 color: $background-color;
+font-weight: 700;
 }
 
 /* change the color of active or hovered links */
@@ -192,3 +194,4 @@ background-color: $background-color;
 .color-orange {
 color: $text-color-minor;
 }
+
