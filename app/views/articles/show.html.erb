@@ -1,5 +1,5 @@
-<h2 align="center">Title: <%= @article.title %></h2>
-<div class="well col-xs-8 col-xs-offset-2">
+<h2 align="center"><%= @article.title %></h2>
+<div class="well col-sm-8 col-sm-offset-2 col-xs-12">
     <% if @article.user %>
     <ul class="listing">
         <div class="row" align="center">
@@ -11,8 +11,6 @@
         </div>
     </ul> 
     <% end %>
-    <h4 class="center description"><strong>Description:</strong></h4>
-    <hr>
     <%= simple_format(@article.description) %>
     <div class="article-actions">
     <% if logged_in? %>

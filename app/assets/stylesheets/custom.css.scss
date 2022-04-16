@@ -12,36 +12,105 @@ $accent-color-transparent: #ff980077;
 $accent-color-light: #fffefd;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body::before {
+content: '';
+z-index: -1;
+}
 body {
+position: sticky;
+z-index: 3;
 background-color: $background-color;
+opacity: 1;
+background-image: linear-gradient(30deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(150deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(30deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(150deg, $background-color-light 12%, transparent 12.5%, transparent 87%, $background-color-light 87.5%, $background-color-light),
+linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5%, transparent 75%, $background-color-light-transparent 75%, $background-color-light-transparent),
+linear-gradient(60deg, $background-color-light-transparent 25%, transparent 25.5%, transparent 75%, $background-color-light-transparent 75%, $background-color-light-transparent);
+background-size: 80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+a:not(.nav-link):not(.index-link):not(.btn):not(.active > a), h1, h2, h4, .control-label {
+color: $text-color-minor;
+}
+p {
+color: $text-color-main;
+}
+hr {
+height: 0;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
+}
+.body-container {
+background-color: rgba(0,0,0,0.6);
+width: 100%;
+height: 100vh;
+position: absolute;
+left: 0;
+top: 0;
+padding-top: 50px;
+z-index: -1;
+-ms-overflow-style: none;
+scrollbar-width: none;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.body-container::-webkit-scrollbar {
+width: 8px;
+}
+.body-container::-webkit-scrollbar-track {
+background: $background-color-light;
+}
+.body-container::-webkit-scrollbar-thumb {
+background-color: $accent-color;
+border-radius: 4px;
+border-width: 3px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
+}
+.well {
+background-color: $background-color-light;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 }
 #logo {
 float: left;
 font-size: 1.7em;
-color: white;
+color: $background-color;
 text-transform: uppercase;
 letter-spacing: -1px;
 font-weight: bold;
 }
 #logo:hover {
-color: #fff;
 text-decoration: none;
 }
 .article-actions {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 padding-top: 5px;
 }
 .article-title {
+color: $text-color-header;
 font-weight: bold;
 font-size: 1.5em;
 }
 .article-body {
-border-top: 1px solid #eaeaea;
+color: $text-color-main;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);;
 padding-top: 15px;
 padding-bottom: 15px;
 }
 .article-meta-details {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 margin-top: 15px;
 }
 .description {
@@ -52,7 +121,10 @@ list-style: none;
 padding-left: 0;
 }
 .article-body {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 padding-top: 15px;
 padding-bottom: 15px;
 }
@@ -61,7 +133,10 @@ font-weight: bold;
 font-size: 1.5em;
 }
 .article-meta-details {
-border-top: 1px solid #eaeaea;
+border-top: 1px;
+border-width: 1px;
+border-style: solid;
+border-image: linear-gradient(135deg, $lining-color-light 0, $lining-color 100%);
 margin-top: 15px;
 }
 .listing {
@@ -76,19 +151,21 @@ background-color: $text-color-minor;
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-color: $text-color-header;
+color: $background-color;
+font-weight: 700;
 }
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-color: $text-color-header;
+color: $background-color;
+font-weight: 700;
 }
 
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-color: $accent-color;
+color: $background-color;
 }
 
 /* for dropdowns only */
@@ -98,12 +175,41 @@ background-color: $text-color-minor;
 
 /* dropdown item text color */
 .navbar-custom .navbar-nav .dropdown-item {
-color: $text-color-header;
+color: $background-color;
 }
 
 /* dropdown item hover or focus */
 .navbar-custom .navbar-nav .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-item:focus {
-color: $text-color-header;
+color: $background-color;
 background-color: $text-color-minor;
 }
+
+.icon-bar {
+border-color: $background-color;
+color: $background-color;
+background-color: $background-color;
+}
+
+.color-orange {
+color: $text-color-minor;
+}
+
+.pagination > li > a, .pagination > .disabled > a {
+background-color: $background-color-light;
+border-color: $background-color;
+}
+
+.pagination > li > a:hover, .pagination > .disabled > a:hover {
+color: $background-color-light;
+background-color: $background-color;
+border-color: $background-color;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover {
+color: $background-color-light;
+background-color: $accent-color;
+border-color: $background-color;
+}
+
+    
