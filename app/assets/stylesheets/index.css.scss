@@ -31,6 +31,18 @@ z-index: -1;
 header > div {
 text-align: center;
 }
+.arrow-down {
+animation: MoveUpDown 1.5s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(1rem);
+}
+}
 .background-svg {
 transform: translateZ(-20px) scale(3);
 }
@@ -135,13 +147,14 @@ border-color: transparent $background-color transparent transparent;
 .wrapper {
 background-color: $background-color;
 position: absolute;
-left: 0;
 width: 100%;
 height: 100vh;
-overflow-y: hidden;
+left: 0;
+overflow-y: scroll;
 overflow-x: hidden;
 -ms-overflow-style: none;
 scrollbar-width: none;
+perspective: 10px;
 }
 .wrapper::-webkit-scrollbar {
 width: 0px;
@@ -336,7 +349,7 @@ width: 100%;
 height: auto;
 }
 .wrapper {
-background: ($background-color, 0.15);
+background-color: $background-color;
 position: absolute;
 left: 0;
 width: 100%;
@@ -539,12 +552,12 @@ justify-items: center;
 }
 @media screen and (min-width: 1221px) and (min-height: 769px) {
 .wrapper {
-background: ($background-color, 0.15);
+background-color: $background-color;
 position: absolute;
 left: 0;
 width: 100%;
 height: 100vh;
-overflow-y: hidden;
+overflow-y: scroll;
 overflow-x: hidden;
 -ms-overflow-style: none;
 scrollbar-width: none;
