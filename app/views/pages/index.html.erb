@@ -3,9 +3,22 @@
     <%= stylesheet_link_tag "fa.css", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "after.css", "data-turbo-track": "reload" %>
 <% end %>
-<div id="background-boxes"></div>
+<!--div id="background-boxes"></div-->
 <div class="wrapper">
-    <div class="grid-center">
+    <header>
+        <%= image_tag("background-svg.svg", class: "background-svg parallax", alt: "Background") %>
+        <%= image_tag("layer-1-svg.svg", class: "layer-1-svg parallax", alt: "Layer 1") %>
+        <%= image_tag("layer-2-svg.svg", class: "layer-2-svg parallax", alt: "Layer 2") %>
+        <%= image_tag("layer-3-svg.svg", class: "layer-3-svg parallax", alt: "Layer 3") %>
+        <%= image_tag("layer-4-svg.svg", class: "layer-4-svg parallax", alt: "Layer 4") %>
+        <%= image_tag("foreground-svg.svg", class: "foreground-svg parallax", alt: "Foreground") %>
+        <div>
+            <h5 class="title">welcome to</h5>
+            <h1 class="title">Emile Bangma</h1>
+            <h4 class="title">portfolio</h4>
+        </div>
+    </header>
+    <section class="grid-center">
         <div class="center">
             <div id="card">
                 <div id="banner-top"></div>
@@ -115,17 +128,5 @@
                 </p>
             </div>
         </div>
-    </div>
-    <ul class="bg-bubbles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    </section>
 </div>

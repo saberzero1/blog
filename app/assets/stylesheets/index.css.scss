@@ -16,6 +16,39 @@ color: $text-color-main;
 overflow-x: hidden;
 font-family: Helvetica, Arial;
 }
+section {
+background-color: $background-color;
+}
+header {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+transform-style: preserve-3d;
+z-index: -1;
+}
+header > div {
+text-align: center;
+}
+.background-svg {
+transform: translateZ(-20px) scale(3);
+}
+.layer-1-svg {
+transform: translateZ(-8px) scale(1.8);
+}
+.layer-2-svg {
+transform: translateZ(-4px) scale(1.4);
+}
+.layer-3-svg {
+transform: translateZ(-2px) scale(1.2);
+}
+.layer-4-svg {
+transform: translateZ(-1px) scale(1.1);
+}
+.foreground-svg {
+    transform: translateZ(-0px) scale(1);
+}
 .timeline {
 position: relative;
 max-width: 1200px;
@@ -100,7 +133,7 @@ border-color: transparent $background-color transparent transparent;
 }
 @media screen and (min-width: 1221px) and (min-height: 769px) {
 .wrapper {
-background: ($background-color, 0.15);
+background-color: $background-color;
 position: absolute;
 left: 0;
 width: 100%;
@@ -127,6 +160,33 @@ height: 2px;
 border-width: 0;
 background: $background-color-light;
 background: linear-gradient(135deg, $lining-color-light 0, $background-color-light 100%);
+}
+.title {
+text-shadow: 0 0 5px $background-color;
+}
+h5.title{
+font-size: 3.5rem;
+line-height: 3.5rem;
+font-style: italic;
+font-weight: bold;
+margin: 0;
+}
+h4.title {
+font-size: 3.5rem;
+line-height: 4rem;
+margin: 0;
+}
+h1.title {
+font-size: 7rem;
+line-height: 7rem;
+margin: 0;
+}
+.parallax {
+position: absolute;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -1;
 }
 .hidden {
 width: 0px;
@@ -228,13 +288,14 @@ margin-top: 50px;
 margin-bottom: 0;
 }
 .wrapper {
-background: ($background-color, 0.15);
+background-color: $background-color-light;
 position: absolute;
 left: 0;
 width: 100%;
 height: 100vh;
 overflow-y: scroll;
 overflow-x: hidden;
+perspective: 10px;
 }
 ::-webkit-scrollbar {
 width: 0px;
