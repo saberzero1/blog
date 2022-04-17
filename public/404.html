@@ -4,64 +4,100 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
+    * {
+    box-sizing: border-box;
     margin: 0;
-  }
-
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    padding: 0;
+    font-weight: 300;
+    }
+    body {
+    background-color: #1c1c21;
+    color: #e0e0e2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Helvetica, Arial;
+    }
+    section {
+    background-color: #1c1c21;
+    }
+    header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+    }
+    header > div {
+    text-align: center;
+    }
+    .background-svg {
+    transform: translateZ(-20px) scale(3);
+    }
+    .layer-1-svg {
+    transform: translateZ(-8px) scale(1.8);
+    }
+    .layer-2-svg {
+    transform: translateZ(-4px) scale(1.4);
+    }
+    .layer-3-svg {
+    transform: translateZ(-2px) scale(1.2);
+    }
+    .layer-4-svg {
+    transform: translateZ(-1px) scale(1.1);
+    }
+    .foreground-svg {
+        transform: translateZ(-0px) scale(1);
+    }
+    .title {
+    text-shadow: 0 0 5px #1c1c21;
+    }
+    h4.title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin: 0;
+    }
+    h1.title {
+    font-size: 14rem;
+    line-height: 14rem;
+    margin: 0;
+    }
+    .wrapper {
+    background-color: #1c1c21;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    }
+    .parallax {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    }
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  <div class="wrapper">
+    <header>
+        <img src="background-svg.svg" class="background-svg parallax" alt="Background">
+        <img src="layer-1-svg.svg" class="layer-1-svg parallax" alt="Layer 1">
+        <img src="layer-2-svg.svg" class="layer-2-svg parallax" alt="Layer 2">
+        <img src="layer-3-svg.svg" class="layer-3-svg parallax" alt="Layer 3">
+        <img src="layer-4-svg.svg" class="layer-4-svg parallax" alt="Layer 4">
+        <img src="foreground-svg.svg" class="foreground-svg parallax" alt="Foreground">
+        <div>
+            <h1 class="title">404</h1>
+            <h4 class="title">Page Not Found</h4>
+        </div>
+    </header>
   </div>
 </body>
 </html>
