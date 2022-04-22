@@ -7,9 +7,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png"/>
+    <%= favicon_link_tag href: "assets/apple-touch-icon.png", rel: "apple-touch-icon", sizes: "180x180" %>
+    <%= favicon_link_tag href: "assets/favicon-32x32.png", rel: "icon", type: "image/png", sizes: "32x32"  %>
+    <%= favicon_link_tag href: "assets/favicon-16x16.png", rel: "icon", type: "image/png", sizes: "16x16" %>
     <link rel="manifest" href="manifest.webmanifest"/>
     <meta name="theme-color" content="#ff9800"/>
     <meta name="description" content="CV/Portfolio/Blog. Computer Science student at Utrecht University"/>
