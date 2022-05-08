@@ -9,27 +9,27 @@
     "description": "CV/Portfolio/Blog. Computer Science student at Utrecht University",
     "icons": [
         {
-            "src": "/assets/icon-192x192.png",
+            "src": "<%= asset_path '/assets/icon-192x192.png' %>",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/icon-256x256.png",
+            "src": "<%= asset_path '/assets/icon-256x256.png' %>",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/assets/icon-384x384.png",
+            "src": "<%= asset_path '/assets/icon-384x384.png' %>",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/assets/icon-512x512.png",
+            "src": "<%= asset_path '/assets/icon-512x512.png' %>",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "/assets/maskable-icon-512x512.png",
+            "src": "<%= asset_path '/assets/maskable-icon-512x512.png' %>",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"

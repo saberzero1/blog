@@ -10,7 +10,7 @@
     <%= favicon_link_tag "apple-touch-icon.png", rel: "apple-touch-icon", sizes: "180x180" %>
     <%= favicon_link_tag "favicon-32x32.png", rel: "icon", type: "image/png", sizes: "32x32"  %>
     <%= favicon_link_tag "favicon-16x16.png", rel: "icon", type: "image/png", sizes: "16x16" %>
-    <link rel="manifest" href="manifest.webmanifest"/>
+    <link rel="manifest" href="<%= asset_path 'manifest.webmanifest' %>">
     <meta name="theme-color" content="#ff9800"/>
     <meta name="description" content="CV/Portfolio/Blog. Computer Science student at Utrecht University"/>
     <meta name="application-name" content="Emile Bangma - Portfolio"/>
