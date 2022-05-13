@@ -194,8 +194,8 @@
         if (Math.max(window.innerWidth, window.innerHeight) !== wh) {
             var canvas = document.getElementById("bubble");
             wh = Math.max(window.innerWidth, window.innerHeight);
-            canvas.setAttribute('width',wh);
-            canvas.setAttribute('height',wh);
+            ctx.canvas.width = wh;
+            ctx.canvas.height = wh;
             init();
             bubble(); 
         }
