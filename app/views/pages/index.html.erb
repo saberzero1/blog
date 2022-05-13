@@ -192,25 +192,24 @@
     bubble(); 
 
     function resizedw() {
-        var canvas = document.getElementById("bubble");
-        w = window.innerWidth;
-        h = window.innerHeight;
-        canvas.setAttribute('width',w);
-        canvas.setAttribute('height',h);
-        init();
-        bubble(); 
+        if (canvas.width !== w || canvas.height !== h) {
+            var canvas = document.getElementById("bubble");
+            w = window.innerWidth;
+            h = window.innerHeight;
+            canvas.setAttribute('width',w);
+            canvas.setAttribute('height',h);
+            init();
+            bubble(); 
+        }
     }
 
-    var resize;
+    var resizecanvas;
 
-    function reset() {
-        clearTimeout(resize);
+    function resetcanvas() {
+        clearTimeout(resizecanvas);
         resize = setTimeout(resizedw, 100);
     };
 
-    window.addEventListener("resize", reset);
-    if (screen.orientation) { 
-        screen.orientation.addEventListener("change", reset);
-    }
+    window.addEventListener('resize', reportWindowSize);
     </script>
 </div>
