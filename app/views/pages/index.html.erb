@@ -132,10 +132,18 @@
         </div>
     </section>
     <script>
-    window.onresize = function() {
+    function resizedw(){
         var canvas = document.getElementById("bubble");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        init();
+        bubble(); 
+    }
+
+    var resize;
+    window.onresize = function(){
+        clearTimeout(resize);
+        resize = setTimeout(resizedw, 100);
     };
 
     var w = window.innerWidth,
