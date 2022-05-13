@@ -198,7 +198,16 @@
             h = window.innerHeight;
             canvas.setAttribute('width',w);
             canvas.setAttribute('height',h);
-            size = 7;
+            for(var i = 0; i < arc; i++) {
+                lights[i] = {
+                x: Math.ceil(Math.random() * w),
+                y: Math.ceil(Math.random() * h),
+                toX: Math.random() * 5 + 1,
+                toY: Math.random() * 5 + 1,
+                c: colors[Math.floor(Math.random()*colors.length)],
+                size: Math.random() * size
+            }
+        }
             init();
             bubble(); 
         }
