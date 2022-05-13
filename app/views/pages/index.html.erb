@@ -132,8 +132,7 @@
         </div>
     </section>
     <script>
-    var w = window.innerWidth,
-        h = window.innerHeight,
+    var wh = Math.max(window.innerWidth, window.innerHeight),
         canvas = document.getElementById('bubble'),
         ctx = canvas.getContext('2d'),
         rate = 60,
@@ -145,8 +144,8 @@
         lights = new Array,
         colors = ['#ff9800','#f46a49','#cc5168','#924970', '#58415f', '#31313a', '#1c1c21'];
 
-    canvas.setAttribute('width',w);
-    canvas.setAttribute('height',h);
+    canvas.setAttribute('width',wh);
+    canvas.setAttribute('height',wh);
 
     function init() {
     time = 0;
@@ -154,8 +153,8 @@
 
     for(var i = 0; i < arc; i++) {
         lights[i] = {
-        x: Math.ceil(Math.random() * w),
-        y: Math.ceil(Math.random() * h),
+        x: Math.ceil(Math.random() * wh),
+        y: Math.ceil(Math.random() * wh),
         toX: Math.random() * 5 + 1,
         toY: Math.random() * 5 + 1,
         c: colors[Math.floor(Math.random()*colors.length)],
@@ -165,7 +164,7 @@
     }
 
     function bubble() {
-    ctx.clearRect(0,0,w,h);
+    ctx.clearRect(0,0,wh,wh);
 
     for(var i = 0; i < arc; i++) {
         var li = lights[i];
@@ -178,10 +177,10 @@
         li.x = li.x + li.toX * (time * 0.05);
         li.y = li.y + li.toY * (time * 0.05);
         
-        if(li.x > w) { li.x = 0; }
-        if(li.y > h) { li.y = 0; }
-        if(li.x < 0) { li.x = w; }
-        if(li.y < 0) { li.y = h; }
+        if(li.x > wh) { li.x = 0; }
+        if(li.y > wh) { li.y = 0; }
+        if(li.x < 0) { li.x = wh; }
+        if(li.y < 0) { li.y = wh; }
     }
     if(time < speed) {
         time++;
@@ -192,12 +191,11 @@
     bubble(); 
 
     function resizedw() {
-        if (canvas.width !== w || canvas.height !== h) {
+        if (Math.max(window.innerWidth, window.innerHeight) !== wh) {
             var canvas = document.getElementById("bubble");
-            w = window.innerWidth;
-            h = window.innerHeight;
-            canvas.setAttribute('width',w);
-            canvas.setAttribute('height',h);
+            wh = Math.max(window.innerWidth, window.innerHeight);
+            canvas.setAttribute('width',wh);
+            canvas.setAttribute('height',wh);
             init();
             bubble(); 
         }
