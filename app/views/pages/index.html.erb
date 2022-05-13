@@ -208,7 +208,9 @@
         resize = setTimeout(resizedw, 100);
     };
 
-    window.onresize = reset();
-    ScreenOrientation.onchange = reset();
+    window.addEventListener("resize", reset);
+    if (screen.orientation) { 
+        screen.orientation.addEventListener("change", reset);
+    }
     </script>
 </div>
