@@ -193,8 +193,10 @@
 
     function resizedw() {
         var canvas = document.getElementById("bubble");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas.setAttribute('width',w);
+        canvas.setAttribute('height',h);
         init();
         bubble(); 
     }
