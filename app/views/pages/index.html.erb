@@ -132,20 +132,6 @@
         </div>
     </section>
     <script>
-    function resizedw(){
-        var canvas = document.getElementById("bubble");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        init();
-        bubble(); 
-    }
-
-    var resize;
-    window.onresize = function(){
-        clearTimeout(resize);
-        resize = setTimeout(resizedw, 100);
-    };
-
     var w = window.innerWidth,
         h = window.innerHeight,
         canvas = document.getElementById('bubble'),
@@ -204,5 +190,23 @@
     }
     init();
     bubble(); 
+
+    function resizedw() {
+        var canvas = document.getElementById("bubble");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+        bubble(); 
+    }
+
+    var resize;
+
+    function reset() {
+        clearTimeout(resize);
+        resize = setTimeout(resizedw, 100);
+    };
+
+    window.onresize = reset();
+    ScreenOrientation.onchange = reset();
     </script>
 </div>
