@@ -16,6 +16,9 @@ color: $text-color-main;
 overflow-x: hidden;
 font-family: Helvetica, Arial;
 }
+canvas {
+object-fit: cover;
+}
 section {
 background-color: $background-color;
 }
