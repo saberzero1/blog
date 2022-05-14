@@ -1,6 +1,7 @@
 # README
 
 [![CodeQL](https://github.com/saberzero1/portfolio/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/saberzero1/portfolio/actions/workflows/codeql-analysis.yml)
+[![Rubocop](https://github.com/saberzero1/portfolio/actions/workflows/rubocop.yml/badge.svg?branch=main)](https://github.com/saberzero1/portfolio/actions/workflows/rubocop.yml)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
