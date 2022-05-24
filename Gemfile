@@ -57,6 +57,9 @@ gem 'bootstrap-will_paginate'
 # Encryption
 gem "figaro"
 
+# Dependencies
+gem "nokogiri", ">=1.13.6"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

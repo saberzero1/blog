@@ -282,6 +282,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails-cdn
   mysql2
+  nokogiri (>= 1.13.6)
   puma (>= 5.6.4)
   rails (~> 7.0.2, >= 7.0.2.4)
   rails_real_favicon
