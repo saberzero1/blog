@@ -1,0 +1,180 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag "index.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "fa.css", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "after.css", "data-turbo-track": "reload" %>
+<% end %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>resume</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  /*
+   * Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+   *
+   * CSS for making a resume with pandoc. Inspired by moderncv.
+   *
+   * This CSS document is delivered to you under the CC BY-SA 3.0 License.
+   * https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+   */
+
+  /* Whole document */
+  .background-resume {
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 10px 10px 10px 10px;
+  }
+
+  /* Title of the resume */
+  h1 {
+      font-size: 55px;
+      text-align:center;
+      margin-bottom:15px;
+  }
+  /* h1:hover { */
+  /*     background-color: #757575; */
+  /*     color: #FFFFFF; */
+  /*     text-shadow: 1px 1px 1px #333; */
+  /* } */
+
+  /* Titles of categories */
+  h2 {
+      /* This is called "sectioncolor" in the ConTeXt stylesheet. */
+  }
+  /* There is a bar just before each category */
+  h2:before {
+      content: "";
+      display: inline-block;
+      margin-right:1%;
+      width: 16%;
+      height: 10px;
+      /* This is called "rulecolor" in the ConTeXt stylesheet. */
+      background-color: #ff9800;
+  }
+  /* h2:hover { */
+  /*     background-color: #397249; */
+  /*     color: #FFFFFF; */
+  /*     text-shadow: 1px 1px 1px #333; */
+  /* } */
+
+  /* Definitions */
+  dt {
+      float: left;
+      clear: left;
+      width: max(17%, 110px);
+      font-weight: bold;
+  }
+  dd {
+      margin-left: max(17%, 110px);
+      margin-bottom:7px;
+  }
+  p {
+      margin-top:0;
+      margin-bottom:7px;
+  }
+
+  /* Blockquotes */
+  blockquote {
+      text-align: center
+  }
+
+  /* Links */
+  a {
+      text-decoration: none;
+  }
+  a:hover, a:active {
+      text-decoration: none;
+  }
+
+  /* Horizontal separators */
+  hr {
+  }
+
+  table {
+      width: 100%;
+  }
+  </style>
+</head>
+<body>
+<div class="background-resume">
+<h1 id="emile-bangma">Emile Bangma</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td>Zuiderzeestraat 15A</td>
+<td style="text-align: right;"><a href="mailto:contact@emilebangma.com">contact@emilebangma.com</a></td>
+</tr>
+<tr class="even">
+<td>3522JT Utrecht</td>
+<td style="text-align: right;"><a href="emilebangma.com">portfolio</a></td>
+</tr>
+<tr class="odd">
+<td>Utrecht</td>
+<td style="text-align: right;"><a href="https://github.com/saberzero1" target="_blank">GitHub</a></td>
+</tr>
+<tr class="even">
+<td>The Netherlands</td>
+<td style="text-align: right;"><a href="tel:+31613541844">+31 6 1354 1844</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="education">Education</h2>
+<dl>
+<dt>2018-2022 (expected)</dt>
+<dd><p><strong>BSc, Computer Science</strong>; Utrecht University (Utrecht)</p>
+<p><em>Thesis title: <a href="https://github.com/UU-tracktech/tracktech" target="_blank">TrackTech: Real-time tracking of subjects and objects on multiple cameras</a></em></p>
+</dd>
+</dl>
+<h2 id="experience">Experience</h2>
+<p><strong>Full-Stack Developer:</strong></p>
+<p>Voluntering as full-stack developer for Ichthus Utrecht (Student Association). Focussed mostly on JavaScript front-end and Mobile Functionality. Accomplishments include:</p>
+<ul>
+<li><p>Implemented Progressive Web App functionality.</p></li>
+<li><p>Optimizing and refining responsive mobile view.</p></li>
+</ul>
+<h2 id="technical-experience">Technical Experience</h2>
+<dl>
+<dt>Portfolio</dt>
+<dd><a href="emilebangma.com">Portfolio Website</a>. First attempt at a full-stack project. Written in Ruby on Rails.
+</dd>
+<dt>Thesis Project</dt>
+<dd><a href="https://github.com/UU-tracktech/tracktech" target="_blank">TrackTech: Real-time tracking of subjects and objects on multiple cameras</a>. Mostly written in Python.
+</dd>
+<dt>Programming Languages</dt>
+<dd>* <strong>C#:</strong> Used during most courses of the Computer Science bachelor.
+</dd>
+<dd><p><strong>PHP:</strong> Mostly used in the <a href="https://ichthusutrecht.nl" target="_blank">Ichthus Utrecht</a> website using the Laravel framework.</p>
+</dd>
+<dd><p><strong>JavaScript:</strong> Both plain JavaScript and Vue.</p>
+</dd>
+<dd><p>Basic knowledge of <strong>Ruby</strong>, <strong>Python</strong>, <strong>SCSS</strong></p>
+</dd>
+</dl>
+<h2 id="extra-section">Extra Section</h2>
+<ul>
+<li><p>Human Languages:</p>
+<ul>
+<li>Dutch (native speaker)</li>
+<li>English (fluent)</li>
+</ul></li>
+</ul>
+</body>
+</body>
+</html>
